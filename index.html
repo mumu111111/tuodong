@@ -23,6 +23,23 @@
     <div class="wrap" id="wrap">
         <div id="dd">我是div</div>
     </div>
+
+    <script>
+        // 当鼠标移动时 不断获取鼠标的坐标  将坐标给div
+        var wo = document.getElementById('dd')
+        xx(wo)
+        function xx(uu) {
+
+            wrap.onmousemove = function (e) {
+                console.log(e)
+                var x = e.clientX
+                var y = e.clientY
+                console.log(e.clientX, e.clientY)
+                uu.style.left = x - 15 + "px"
+                uu.style.top = y - 15 + "px"
+            }
+        }
+    </script>
 </body>
 
 </html>
